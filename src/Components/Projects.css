@@ -1,0 +1,76 @@
+/* Projects.css */
+
+.projectHeading {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Flex container */
+.projectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;    /* center all cards */
+  gap: 1.5rem;                /* space between cards */
+}
+
+/* Each card */
+.projectBox {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 250px;               /* fixed width for consistency */
+  transition: transform .2s ease;
+}
+
+.projectBox:hover {
+  transform: translateY(-4px);
+}
+
+.projectPhoto {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.projectBox > div {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectButtons {
+  margin: 1rem 0;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.projectTech {
+  margin-top: auto;
+}
+
+.techBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Mobile fallback */
+@media (max-width: 680px) {
+  .projectsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .projectBox {
+    width: 70%;              /* almost full width on mobile */
+  }
+
+  .projectPhoto {
+    height: 140px;
+  }
+}
